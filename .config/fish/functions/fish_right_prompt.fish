@@ -19,7 +19,7 @@ function fish_right_prompt
 		set_color magenta
                 set mode V
         end
-	echo "[$mode]" 
+	echo " [$mode]" 
 	end
 	set_color -b normal
 end

@@ -1,10 +1,12 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
+SETUVAR --export GIT_ASKPASS:/usr/bin/ksshaskpass
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_config:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_la:lsd\x20\x2dla
 SETUVAR _fish_abbr_ll:lsd\x20\x2dl
+SETUVAR _fish_abbr_nvd:neovide
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
