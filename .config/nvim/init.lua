@@ -37,6 +37,6 @@ require('lualine').setup({
 })
 
 -- neovide
-vim.g.neovide_cursor_animation_length=0.12
-vim.o.guifont="FiraCode Nerd Font Mono:h20"
+vim.g.neovide_cursor_animation_length=0.09
+vim.o.guifont="FiraCode Nerd Font:h20"
 
