@@ -10,7 +10,7 @@ require 'paq-nvim'{
   	'hoob3rt/lualine.nvim';
 	'neovim/nvim-lspconfig';
 	'hrsh7th/nvim-compe';
-
+	'fladson/vim-kitty';
 }
 
 -- LSP
@@ -37,6 +37,6 @@ require('lualine').setup({
 })
 
 -- neovide
-vim.g.neovide_cursor_animation_length=0.09
+vim.g.neovide_cursor_animation_length=0.07
 vim.o.guifont="FiraCode Nerd Font:h20"
 

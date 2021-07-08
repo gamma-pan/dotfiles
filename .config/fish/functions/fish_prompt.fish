@@ -1,6 +1,6 @@
 function fish_prompt
-	set_color cyan
-	echo -n ''
+	set_color blue
+	echo -n ''
 	set_color white
 	echo -n " • "
 	set_color AE853D
