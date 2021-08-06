@@ -1,4 +1,4 @@
-# suppress greeting
+# print bitcoin value as greeting
 set -U fish_greeting ""
 
 # no vi mode indicator

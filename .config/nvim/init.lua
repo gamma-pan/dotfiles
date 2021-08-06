@@ -11,6 +11,7 @@ require 'paq-nvim'{
 	'neovim/nvim-lspconfig';
 	'hrsh7th/nvim-compe';
 	'fladson/vim-kitty';
+	'navarasu/onedark.nvim';
 }
 
 -- LSP
@@ -24,10 +25,12 @@ opt.breakindentopt = 'shift:2,sbr'
 opt.showbreak = '·>'
 opt.linebreak = true
 opt.hidden = true
+opt.scrolloff = 5
 
 -- color
-vim.g.tokyonight_style = "night"
-cmd("colorscheme tokyonight")
+vim.g.tokyonight_style  = "night"
+vim.cmd[[colorscheme tokyonight]]
+
 
 --lualine 
 require('lualine').setup({
@@ -38,5 +41,5 @@ require('lualine').setup({
 
 -- neovide
 vim.g.neovide_cursor_animation_length=0.07
-vim.o.guifont="FiraCode Nerd Font:h20"
+vim.o.guifont="FiraCode Nerd Font:h11"
 
