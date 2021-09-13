@@ -2,20 +2,19 @@
 local opt = vim.opt
 local cmd = vim.cmd
 
--- paq
-require 'paq-nvim'{
-	'folke/tokyonight.nvim';
-	--required for lualine, don't know how to set dependecies yet so im just putting it before the other one :P
-	{'kyazdani42/nvim-web-devicons', opt = true};
-  	'hoob3rt/lualine.nvim';
-	'neovim/nvim-lspconfig';
-	'hrsh7th/nvim-compe';
-	'fladson/vim-kitty';
-	'navarasu/onedark.nvim';
-}
+--packer.nvim
+require'plugins'
 
 -- LSP
 require'lspconfig'.pyright.setup{}
+
+--Treesitter
+require'nvim-treesitter.configs'.setup {
+	ensure_installed = { 'fish' },
+	highlight = {
+		enable = true,
+	},
+}
 
 -- options
 opt.relativenumber = true
@@ -28,15 +27,14 @@ opt.hidden = true
 opt.scrolloff = 5
 
 -- color
-vim.g.tokyonight_style  = "night"
-vim.cmd[[colorscheme tokyonight]]
-
+vim.g.tokyonight_style = 'night'
+vim.cmd("colorscheme tokyonight")
 
 --lualine 
-require('lualine').setup({
-	options = {
-		theme = 'tokyonight'
-	}
+require'lualine'.setup({
+	options = { 
+		theme = 'tokyonight',
+	},
 })
 
 -- neovide
