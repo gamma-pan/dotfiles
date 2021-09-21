@@ -5,5 +5,6 @@ function fish_prompt
 	echo -n '   '
 	echo -n (pwd)
 	set_color blue
-	echo -n ''\n' ❯ '
+	#echo -n ''\n' ❯ '
+	echo -n ''\n' $ '
 end
