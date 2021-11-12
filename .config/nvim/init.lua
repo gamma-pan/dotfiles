@@ -7,10 +7,10 @@ require'plugins'
 
 --Treesitter
 require'nvim-treesitter.configs'.setup {
-        ensure_installed = { 'fish' },
-        highlight = {
-                enable = true,
-        },
+    ensure_installed = { 'fish' },
+    highlight = {
+        enable = true,
+    },
 }
 
 --lsp
@@ -27,32 +27,46 @@ opt.hidden = true
 opt.scrolloff = 5
 opt.termguicolors = true
 opt.mouse = "n"
+opt.ut = 500
+opt.completeopt = "menuone,noselect"
 
----- tabs
+--python
+vim.g.python3_host_prog = "/home/pan/.virtualenvs/neovim/bin/python3"
+
+-- tabs
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.expandtab = true
 
--- leader 
+-- leader
 vim.g.mapleader = ","
 
 -- color
-vim.g.tokyonight_style = 'night'
-vim.cmd("colorscheme tokyonight")
+vim.g.tokyonight_style = 'storm'
+cmd("colorscheme tokyonight")
 
 --bindings
 require'keybinds'
 
---lualine 
+--autocommands
+vim.cmd("runtime autocommands.vim")
+
+--lualine
 require'lualine'.setup({
-	options = { 
+	options = {
 		theme = 'tokyonight',
 	},
 })
 
---bufferline
-require("bufferline").setup{}
+--barbar
+vim.g.bufferline = {
+    auto_hide = true,
+}
+
+--indent-blankline
+vim.g.indent_blankline_filetype_exclude = {'help'}
+
 
 --[[
 -- neovide

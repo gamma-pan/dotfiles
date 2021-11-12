@@ -9,8 +9,7 @@ return require('packer').startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
-    use 'glepnir/lspsaga.nvim'
-	use { 'akinsho/bufferline.nvim',
+	use { 'romgrk/barbar.nvim',
 		requires = 'kyazdani42/nvim-web-devicons'
 	}
     use { 'ms-jpq/coq_nvim',
@@ -22,6 +21,7 @@ return require('packer').startup(function()
     use { 'ms-jpq/coq.thirdparty',
         branch = '3p'
     }
+    use "lukas-reineke/indent-blankline.nvim"
 
 end)
 

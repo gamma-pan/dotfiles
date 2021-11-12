@@ -4,6 +4,6 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- <Tab> to navigate the completion menu
---map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
---map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
+map('n','<leader>w',':w<CR>')
+map('n','<leader>q',':q<CR>')
+map('n','<leader>c',':COQnow<CR>')
