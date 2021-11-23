@@ -6,4 +6,5 @@ end
 
 map('n','<leader>w',':w<CR>')
 map('n','<leader>q',':q<CR>')
-map('n','<leader>c',':COQnow<CR>')
+map('n','<leader>c',':COQnow --shut-up<CR>')
+map('n','<leader>f','<cmd>lua vim.lsp.buf.formatting()<CR>')

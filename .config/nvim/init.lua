@@ -18,7 +18,7 @@ require'lsp'
 
 -- options
 opt.relativenumber = true
-opt.signcolumn = 'yes'
+opt.signcolumn = 'number'
 opt.breakindent= true
 opt.breakindentopt = 'shift:2,sbr'
 opt.showbreak = '·>'
