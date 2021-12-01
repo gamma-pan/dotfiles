@@ -3,10 +3,10 @@ local coq = require'coq'
 
 --coq
 vim.g.coq_settings = {
-    auto_start = 'shut-up',
     keymap = {
         jump_to_mark = "<C-Space>",
     },
+    auto_start = "shut-up",
 }
 
 require'coq_3p'{
@@ -40,7 +40,7 @@ lsp.angularls.setup(coq.lsp_ensure_capabilities{
 lsp.tsserver.setup(coq.lsp_ensure_capabilities{
 })
 
---lua
+--sumneko lua
 local lua_root_path = '/home/pan/.source/lua-language-server'
 local lua_bin = lua_root_path .. '/bin/Linux/lua-language-server'
 lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities({
@@ -55,14 +55,18 @@ lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities({
                 globals = {'vim'},
             },
             workspace = {
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-                },
+                library = vim.api.nvim_get_runtime_file("",true),
             },
         }
     }
 }))
 
 -- tex
-lsp.texlab.setup{}
+local tex_aux_dir = "./." .. vim.fn.expand("%") .. "-aux"
+lsp.texlab.setup(coq.lsp_ensure_capabilities({
+    settings = {
+        texlab = {
+            auxDirectory = '/home/pan/Desktop'
+        }
+    }
+}))

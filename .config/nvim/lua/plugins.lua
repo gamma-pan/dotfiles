@@ -1,10 +1,10 @@
 return require('packer').startup(function()
 	use 'folke/tokyonight.nvim'
+    use 'marko-cerovac/material.nvim'
 	use {
 		'hoob3rt/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
-	use 'neovim/nvim-lspconfig'
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
@@ -12,16 +12,15 @@ return require('packer').startup(function()
 	use { 'romgrk/barbar.nvim',
 		requires = 'kyazdani42/nvim-web-devicons'
 	}
-    use { 'ms-jpq/coq_nvim',
-        branch = 'coq'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use {'neoclide/coc.nvim', branch = 'release'}
+    use 'navarasu/onedark.nvim'
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+        ft = {'markdown'}
     }
-    use { 'ms-jpq/coq.artifacts',
-        branch = 'artifacts'
-    }
-    use { 'ms-jpq/coq.thirdparty',
-        branch = '3p'
-    }
-    use "lukas-reineke/indent-blankline.nvim"
-
+    use 'dkarter/bullets.vim'
+    use 'jiangmiao/auto-pairs'
 end)
 

@@ -14,20 +14,22 @@ require'nvim-treesitter.configs'.setup {
 }
 
 --lsp
-require'lsp'
+--require'lsp'
 
 -- options
 opt.relativenumber = true
 opt.signcolumn = 'number'
+
 opt.breakindent= true
 opt.breakindentopt = 'shift:2,sbr'
 opt.showbreak = '·>'
 opt.linebreak = true
+
 opt.hidden = true
 opt.scrolloff = 5
 opt.termguicolors = true
 opt.mouse = "n"
-opt.ut = 500
+opt.ut = 300
 opt.completeopt = "menuone,noselect"
 
 --python
@@ -43,8 +45,9 @@ opt.expandtab = true
 vim.g.mapleader = ","
 
 -- color
-vim.g.tokyonight_style = 'storm'
-cmd("colorscheme tokyonight")
+vim.g.material_style = 'darker'
+cmd[[colorscheme material]]
+
 
 --bindings
 require'keybinds'
@@ -52,10 +55,13 @@ require'keybinds'
 --autocommands
 vim.cmd("runtime autocommands.vim")
 
+--coc
+vim.cmd("runtime coc.vim")
+
 --lualine
 require'lualine'.setup({
 	options = {
-		theme = 'tokyonight',
+		theme = 'material-nvim',
 	},
 })
 
@@ -66,7 +72,6 @@ vim.g.bufferline = {
 
 --indent-blankline
 vim.g.indent_blankline_filetype_exclude = {'help'}
-
 
 --[[
 -- neovide
